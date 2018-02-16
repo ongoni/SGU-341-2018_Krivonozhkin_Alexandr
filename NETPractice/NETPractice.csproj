@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Cube.cs" />
-    <Compile Include="Classes\Exceptions\InvalidDataException.cs" />
     <Compile Include="Classes\Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
