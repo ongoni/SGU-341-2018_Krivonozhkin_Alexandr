@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using NETPractice.Classes.Exceptions;
 
 namespace NETPractice.Classes {
 
@@ -33,13 +34,18 @@ namespace NETPractice.Classes {
                     
                     if (coords.Length != 3) throw new InvalidDataException();
 
-                    _vertices.Add(
-                        new Point(
-                            double.Parse(coords[0]),
-                            double.Parse(coords[1]),
-                            double.Parse(coords[2])
-                        )
-                    );
+                    try {
+                        _vertices.Add(
+                            new Point(
+                                double.Parse(coords[0]),
+                                double.Parse(coords[1]),
+                                double.Parse(coords[2])
+                            )
+                        ); 
+                    } catch (Exception e) {
+                        Console.WriteLine(e.Message);
+                        throw new InvalidDataFormatException();
+                    }
                     
                     line = streamReader.ReadLine();
                 }
@@ -59,6 +65,10 @@ namespace NETPractice.Classes {
                 .Where(x => x != temp)
                 .Select(vertex => Point.GetDistance(temp, vertex))
                 .Min();
+        }
+
+        public List<Point> GetVertices() {
+            return _vertices;
         }
         
         // если существует 
@@ -106,7 +116,15 @@ namespace NETPractice.Classes {
             return GetArea() * Length;
         }
 
+        public void Show(StreamWriter streamWriter) {
+            streamWriter.WriteLine("vertices:");
+            foreach (var vertex in _vertices) {
+                streamWriter.WriteLine(vertex);
+            }
+        }
+        
         public void Show() {
+            Console.WriteLine("vertices:");
             foreach (var vertex in _vertices) {
                 Console.WriteLine(vertex);
             }

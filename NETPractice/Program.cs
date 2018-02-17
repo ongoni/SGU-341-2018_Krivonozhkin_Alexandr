@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using NETPractice.Classes;
 
 namespace NETPractice {
@@ -6,14 +7,14 @@ namespace NETPractice {
     internal class Program {
 
         public static void Main(string[] args) {
-            Cube test = new Cube();
             Cube cube = new Cube("../../cubeExample.txt");
-            Console.WriteLine(cube.GetArea());
-            Console.WriteLine(cube.GetCubage());
-            Console.WriteLine(test.IsValid());
-            Console.WriteLine(cube.IsValid());
-            test.Show();
-            cube.Show();
+
+            using (StreamWriter streamWriter = new StreamWriter("../../out.txt")) {
+                streamWriter.WriteLine($"area - {cube.GetArea()}");
+                streamWriter.WriteLine($"cubage - {cube.GetCubage()}");
+
+                cube.Show(streamWriter);
+            }
         }
 
     }

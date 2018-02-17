@@ -10,9 +10,9 @@ namespace NETPractice.Classes {
             Z = z;
         }
 
-        public double X { get; set; }
-        public double Y { get; set; }
-        public double Z { get; set; }
+        public double X { get; }
+        public double Y { get; }
+        public double Z { get; }
 
         public static double GetDistance(Point a, Point b) {
             return Math.Sqrt(
