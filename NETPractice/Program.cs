@@ -12,6 +12,8 @@ namespace NETPractice {
             Console.WriteLine(cube.GetCubage());
             Console.WriteLine(test.IsValid());
             Console.WriteLine(cube.IsValid());
+            test.Show();
+            cube.Show();
         }
 
     }

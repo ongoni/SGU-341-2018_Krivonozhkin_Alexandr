@@ -9,11 +9,11 @@ namespace NETPractice.Classes {
             Y = y;
             Z = z;
         }
-        
+
         public double X { get; set; }
         public double Y { get; set; }
         public double Z { get; set; }
-        
+
         public static double GetDistance(Point a, Point b) {
             return Math.Sqrt(
                 Math.Pow(b.X - a.X, 2) +
@@ -21,6 +21,11 @@ namespace NETPractice.Classes {
                 Math.Pow(b.Z - a.Z, 2)
             );
         }
+
+        public override string ToString() {
+            return $"({X}, {Y}, {Z})";
+        }
+
     }
 
 }

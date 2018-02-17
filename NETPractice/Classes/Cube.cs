@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 
 namespace NETPractice.Classes {
 
@@ -26,7 +27,10 @@ namespace NETPractice.Classes {
             using (StreamReader streamReader = new StreamReader(path)) {
                 string line = streamReader.ReadLine();
                 while (line != null) {
-                    string[] coords = line.Split(' ');
+                    string[] coords = line
+                        .Replace(".", Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator)
+                        .Split(' ');
+                    
                     if (coords.Length != 3) throw new InvalidDataException();
 
                     _vertices.Add(
@@ -100,6 +104,12 @@ namespace NETPractice.Classes {
 
         public double GetCubage() {
             return GetArea() * Length;
+        }
+
+        public void Show() {
+            foreach (var vertex in _vertices) {
+                Console.WriteLine(vertex);
+            }
         }
         
     }
