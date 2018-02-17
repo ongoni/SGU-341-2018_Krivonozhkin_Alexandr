@@ -6,14 +6,13 @@ namespace NETPractice {
 
     internal class Program {
 
-        public static void Main(string[] args) {
-            Cube cube = new Cube("../../cubeExample.txt");
+        public static void Main(string[] args)
+        {
+            Cube cube = CubeLoader.LoadFromTextFile("../../cubeExample.txt");
 
             using (StreamWriter streamWriter = new StreamWriter("../../out.txt")) {
-                streamWriter.WriteLine($"area - {cube.GetArea()}");
-                streamWriter.WriteLine($"cubage - {cube.GetCubage()}");
-
-                cube.Show(streamWriter);
+                streamWriter.WriteLine($"area - {cube.Area}");
+                streamWriter.WriteLine($"cubage - {cube.Volume}");
             }
         }
 
