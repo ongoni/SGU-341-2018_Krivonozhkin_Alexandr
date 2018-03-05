@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NETPractice.CubeTask.Exceptions {
+namespace NETPractice.Encapsulation.Exceptions {
 
     public class InvalidDataFormatException: Exception {
 

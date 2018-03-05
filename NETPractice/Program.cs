@@ -1,6 +1,6 @@
 ﻿using System.IO;
-using NETPractice.CubeTask.DAO;
-using NETPractice.CubeTask.Entities;
+using NETPractice.Encapsulation.DAO;
+using NETPractice.Encapsulation.Entities;
 
 namespace NETPractice {
 

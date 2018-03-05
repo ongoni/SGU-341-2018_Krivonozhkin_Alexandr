@@ -1,6 +1,6 @@
 using System;
 
-namespace NETPractice.CubeTask.Entities {
+namespace NETPractice.Encapsulation.Entities {
 
     public class Point {
 

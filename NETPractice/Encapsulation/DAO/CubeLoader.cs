@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
-using NETPractice.CubeTask.Entities;
-using NETPractice.CubeTask.Exceptions;
+using NETPractice.Encapsulation.Entities;
+using NETPractice.Encapsulation.Exceptions;
 
-namespace NETPractice.CubeTask.DAO
+namespace NETPractice.Encapsulation.DAO
 {
     static class CubeLoader
     {

@@ -41,10 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CubeTask\DAO\CubeLoader.cs" />
-    <Compile Include="CubeTask\Entities\Cube.cs" />
-    <Compile Include="CubeTask\Entities\Point.cs" />
-    <Compile Include="CubeTask\Exceptions\InvalidDataFormatException.cs" />
+    <Compile Include="Encapsulation\DAO\CubeLoader.cs" />
+    <Compile Include="Encapsulation\Entities\Cube.cs" />
+    <Compile Include="Encapsulation\Entities\Point.cs" />
+    <Compile Include="Encapsulation\Exceptions\InvalidDataFormatException.cs" />
+    <Compile Include="Inheritance\Author.cs" />
+    <Compile Include="Inheritance\Book.cs" />
+    <Compile Include="Inheritance\Man.cs" />
+    <Compile Include="Inheritance\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
