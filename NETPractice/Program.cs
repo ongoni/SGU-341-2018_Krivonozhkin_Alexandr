@@ -1,5 +1,6 @@
 ﻿using System.IO;
-using NETPractice.Classes;
+using NETPractice.CubeTask.DAO;
+using NETPractice.CubeTask.Entities;
 
 namespace NETPractice {
 
@@ -11,7 +12,7 @@ namespace NETPractice {
 
             using (StreamWriter streamWriter = new StreamWriter("../../out.txt")) {
                 streamWriter.WriteLine($"area - {cube.Area}");
-                streamWriter.WriteLine($"cubage - {cube.Volume}");
+                streamWriter.WriteLine($"volume - {cube.Volume}");
             }
         }
 

@@ -1,10 +1,8 @@
 ﻿using System;
 
-namespace NETPractice.Classes.Exceptions {
+namespace NETPractice.CubeTask.Exceptions {
 
     public class InvalidDataFormatException: Exception {
-
-        public InvalidDataFormatException() { }
 
         public InvalidDataFormatException(string message) : base(message) { }
         

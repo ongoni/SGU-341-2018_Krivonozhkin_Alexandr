@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
-using NETPractice.Classes.Exceptions;
+using NETPractice.CubeTask.Entities;
+using NETPractice.CubeTask.Exceptions;
 
-namespace NETPractice.Classes
+namespace NETPractice.CubeTask.DAO
 {
     static class CubeLoader
     {
-        private static readonly string AllowedSeparator 
-            = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+        private static readonly string AllowedSeparator;
         private const int AllowedCoordsCount = 3;
         private const int AllowedVerticesCount = 8;
+
+        static CubeLoader()
+        {
+            AllowedSeparator  = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+        }
         
         public static Cube LoadFromTextFile(string path)
         {   
@@ -51,14 +56,7 @@ namespace NETPractice.Classes
                 }
             }
             
-            Cube cube = new Cube(vertices);
-
-            if (!cube.IsValid())
-            {
-                throw new InvalidDataException();
-            }
-
-            return cube;
+            return new Cube(vertices);
         }
         
     }

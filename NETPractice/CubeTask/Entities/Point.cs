@@ -1,6 +1,6 @@
 using System;
 
-namespace NETPractice.Classes {
+namespace NETPractice.CubeTask.Entities {
 
     public class Point {
 
@@ -15,13 +15,20 @@ namespace NETPractice.Classes {
             Z = z;
         }
 
-        public double GetDistance(Point other) 
-            => Math.Sqrt(
+        public double GetDistance(Point other)
+        {
+            if (other == null)
+            {
+                throw new ArgumentNullException(nameof(other), "point can't be null");
+            }
+            
+            return Math.Sqrt(
                 Math.Pow(other.X - this.X, 2) +
                 Math.Pow(other.Y - this.Y, 2) +
                 Math.Pow(other.Z - this.Z, 2)
             );
-
+        }
+        
         public override string ToString()
         {
             return $"({X}, {Y}, {Z})";
