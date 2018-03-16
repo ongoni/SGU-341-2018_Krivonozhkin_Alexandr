@@ -1,4 +1,4 @@
-﻿namespace NETPractice.Polymorphism.TransportCompany
+﻿namespace NETPractice.Polymorphism.TransportCompany.Entities
 {
     public class Cargo
     {

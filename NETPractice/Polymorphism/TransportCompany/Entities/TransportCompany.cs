@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using NETPractice.Polymorphism.TransportCompany.AbstractTransport;
+using NETPractice.Polymorphism.TransportCompany.AbstractEntities;
 using NETPractice.Polymorphism.TransportCompany.Exceptions;
 
-namespace NETPractice.Polymorphism.TransportCompany
+namespace NETPractice.Polymorphism.TransportCompany.Entities
 {
     public class TransportCompany
     {

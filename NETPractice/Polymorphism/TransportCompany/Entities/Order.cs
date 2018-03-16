@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace NETPractice.Polymorphism.TransportCompany
+namespace NETPractice.Polymorphism.TransportCompany.Entities
 {
     public class Order
     {
