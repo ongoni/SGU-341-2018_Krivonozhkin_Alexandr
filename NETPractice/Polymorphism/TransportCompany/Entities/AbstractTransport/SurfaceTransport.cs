@@ -1,4 +1,4 @@
-﻿namespace NETPractice.Polymorphism.TransportCompany.AbstractEntities
+﻿namespace NETPractice.Polymorphism.TransportCompany.AbstractTransport
 {
     public class SurfaceTransport : Transport
     {

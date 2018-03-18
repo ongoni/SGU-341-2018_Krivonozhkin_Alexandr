@@ -1,6 +1,6 @@
-﻿using NETPractice.Polymorphism.TransportCompany.AbstractEntities;
+﻿using NETPractice.Polymorphism.TransportCompany.AbstractTransport;
 
-namespace NETPractice.Polymorphism.TransportCompany.InheritedEntities
+namespace NETPractice.Polymorphism.TransportCompany.InheritedTransport
 {
     public class Helicopter : AirTransport
     {
