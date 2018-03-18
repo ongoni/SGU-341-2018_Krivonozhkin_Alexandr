@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using NETPractice.Polymorphism.TransportCompany.AbstractTransport;
 using NETPractice.Polymorphism.TransportCompany.Entities;
+using NETPractice.Polymorphism.TransportCompany.Entities.AbstractTransport;
 using NETPractice.Polymorphism.TransportCompany.Exceptions;
 
 namespace NETPractice.Polymorphism.TransportCompany.Logic

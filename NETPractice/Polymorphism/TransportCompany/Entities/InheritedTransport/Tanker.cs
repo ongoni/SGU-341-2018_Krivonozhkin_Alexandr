@@ -1,6 +1,6 @@
-﻿using NETPractice.Polymorphism.TransportCompany.AbstractTransport;
+﻿using NETPractice.Polymorphism.TransportCompany.Entities.AbstractTransport;
 
-namespace NETPractice.Polymorphism.TransportCompany.InheritedTransport
+namespace NETPractice.Polymorphism.TransportCompany.Entities.InheritedTransport
 {
     public class Tanker : WaterTransport
     {

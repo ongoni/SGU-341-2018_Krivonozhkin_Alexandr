@@ -1,6 +1,4 @@
-﻿using NETPractice.Polymorphism.TransportCompany.Entities;
-
-namespace NETPractice.Polymorphism.TransportCompany.AbstractTransport
+﻿namespace NETPractice.Polymorphism.TransportCompany.Entities.AbstractTransport
 {
     public abstract class Transport
     {
