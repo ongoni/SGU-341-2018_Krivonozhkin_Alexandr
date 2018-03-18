@@ -1,4 +1,6 @@
-﻿namespace NETPractice.Polymorphism.TransportCompany.Entities.AbstractTransport
+﻿using System;
+
+namespace NETPractice.Polymorphism.TransportCompany.Entities.AbstractTransport
 {
     public abstract class Transport
     {
@@ -11,11 +13,7 @@
         public int PassengerCount { get; set; }
         
         public override string ToString()
-            => $"Speed: {Speed}\n"
-               + $"Capacity: {ElevatingCapacity}\n"
-               + $"Brand: {Brand}\n"
-               + $"Staff count: {StaffCount}\n"
-               + $"Passenger count: {PassengerCount}";
+            => $"Speed: {Speed}{Environment.NewLine}Capacity: {ElevatingCapacity}{Environment.NewLine}Brand: {Brand}{Environment.NewLine}Staff count: {StaffCount}{Environment.NewLine}Passenger count: {PassengerCount}";
 
     }
 }
