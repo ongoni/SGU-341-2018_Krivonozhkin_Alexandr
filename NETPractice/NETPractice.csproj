@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF0017B3-A734-41E0-A06B-7701A26102A7}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NETPractice</RootNamespace>
+    <AssemblyName>NETPractice</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Encapsulation\DAO\CubeLoader.cs" />
+    <Compile Include="Encapsulation\Entities\Cube.cs" />
+    <Compile Include="Encapsulation\Entities\Point.cs" />
+    <Compile Include="Encapsulation\Exceptions\InvalidDataFormatException.cs" />
+    <Compile Include="Inheritance\Author.cs" />
+    <Compile Include="Inheritance\Book.cs" />
+    <Compile Include="Inheritance\Man.cs" />
+    <Compile Include="Inheritance\Student.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Bugs\Bug.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Bugs\CriticalBug.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Bugs\MajorBug.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Bugs\MinorBug.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Code\BackendProgrammingCode.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Code\ProgrammingCode.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Code\FrontendProgrammingCode.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Customer.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Employees\AutomatedTestingTester.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Employees\BackendDeveloper.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Employees\Developer.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Employees\Employee.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Employees\FrontendDeveloper.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Employees\ManualTestingTester.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Employees\Tester.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Project.cs" />
+    <Compile Include="Polymorphism\ITCompany\Entities\Salary.cs" />
+    <Compile Include="Polymorphism\ITCompany\Logic\ITCompanyDataHolder.cs" />
+    <Compile Include="Polymorphism\ITCompany\Logic\ITCompanyPaymentHandler.cs" />
+    <Compile Include="Polymorphism\ITCompany\Logic\ITCompanyProjectHandler.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\AbstractTransport\AirTransport.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\AbstractTransport\SurfaceTransport.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\AbstractTransport\Transport.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\AbstractTransport\WaterTransport.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\Cargo.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\InheritedTransport\Car.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\InheritedTransport\Helicopter.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\InheritedTransport\Liner.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\InheritedTransport\Plane.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\InheritedTransport\Tanker.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\InheritedTransport\Train.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Entities\Order.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Exceptions\NoSuitableTransportFoundException.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Logic\TransportCompanyDataHolder.cs" />
+    <Compile Include="Polymorphism\TransportCompany\Logic\TransportCompanyOrderHandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="cubeExample.txt" />
+    <Content Include="out.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
