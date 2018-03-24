@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using NETPractice.Polymorphism.ITCompany.Entities;
 using NETPractice.Polymorphism.ITCompany.Entities.Code;
@@ -39,6 +40,8 @@ namespace NETPractice.Polymorphism.ITCompany.Logic
                     project.Code.Add(programmingCode);
                 }
             }
+            
+            Console.WriteLine("Project \"" + project.Name + "\" done with " + project.Code.Count + " code parts");
         }
         
     }

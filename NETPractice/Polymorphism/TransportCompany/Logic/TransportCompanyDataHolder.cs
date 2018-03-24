@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using NETPractice.Polymorphism.TransportCompany.Entities;
 using NETPractice.Polymorphism.TransportCompany.Entities.AbstractTransport;
 
@@ -19,8 +22,8 @@ namespace NETPractice.Polymorphism.TransportCompany.Logic
         
         public static List<Transport> CompanyTransport
         {
-            get => _companyTransport;
-            private set
+            get => _companyTransport; 
+            set
             {
                 if (value == null || value.Any(x => x == null))
                 {
@@ -43,6 +46,30 @@ namespace NETPractice.Polymorphism.TransportCompany.Logic
 
                 _orders = value;
             }
+        }
+
+        public static void Add(Transport transport)
+        {
+            if (transport == null)
+            {
+                throw new InvalidDataException("transport can't be null");
+            }
+            
+            CompanyTransport.Add(transport);
+            
+            CompanyTransport.Sort(
+                (x, y) => x.ElevatingCapacity.CompareTo(y.ElevatingCapacity)
+            );
+        }
+
+        public static void Add(Order order)
+        {
+            if (order == null)
+            {
+                throw new InvalidDataException("order can't be null");
+            }
+            
+            Orders.Add(order);
         }
         
     }

@@ -16,7 +16,7 @@ namespace NETPractice.Polymorphism.TransportCompany.Logic
                 throw new InvalidDataException("order can't be null");
             }
             
-            TransportCompanyDataHolder.Orders.Add(order);
+            TransportCompanyDataHolder.Add(order);
 
             Transport transport;
             try
@@ -32,7 +32,7 @@ namespace NETPractice.Polymorphism.TransportCompany.Logic
             order.IsCompleted = true;
             order.Cargo.IsDelivered = true;
             
-            return transport.Deliver(order.Cargo);
+            return transport.Deliver(order.Cargo, order.DestinationAddress);
         }
         
     }

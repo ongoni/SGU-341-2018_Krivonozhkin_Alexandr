@@ -19,7 +19,7 @@ namespace NETPractice.Polymorphism.ITCompany.Entities.Employees
 
         #region Properties
 
-        public DateTime StartWorkingDate { get; }
+        public DateTime StartWorkingDate { get; set; }
         
         public string Name
         {

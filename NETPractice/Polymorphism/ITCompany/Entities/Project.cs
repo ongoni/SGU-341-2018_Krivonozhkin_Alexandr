@@ -15,10 +15,25 @@ namespace NETPractice.Polymorphism.ITCompany.Entities
         private string _name;
         private Customer _customer;
 
-        public Project() { }
+        public Project()
+        {
+            Developers = new List<Developer>();
+            Testers = new List<Tester>();
+            Code = new List<ProgrammingCode>();
+        }
 
+        public Project(string name, Customer customer)
+        {
+            Developers = new List<Developer>();
+            Testers = new List<Tester>();
+            Code = new List<ProgrammingCode>();
+            Name = name;
+            Customer = customer;
+        }
+        
         public Project(string name, Customer customer, List<Developer> developers, List<Tester> testers)
         {
+            Code = new List<ProgrammingCode>();
             Name = name;
             Customer = customer;
             Developers = developers;

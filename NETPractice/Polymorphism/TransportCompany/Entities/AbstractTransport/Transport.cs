@@ -5,6 +5,17 @@ namespace NETPractice.Polymorphism.TransportCompany.Entities.AbstractTransport
 {
     public abstract class Transport
     {
+        public Transport() { }
+        
+        public Transport(double speed, double elevatingCapacity, string brand, int staffCount, int passengerCount)
+        {
+            Speed = speed;
+            ElevatingCapacity = elevatingCapacity;
+            Brand = brand;
+            StaffCount = staffCount;
+            PassengerCount = passengerCount;
+        }
+        
         private double _speed;
         private double _elevatingCapacity;
         private string _brand;
@@ -74,7 +85,7 @@ namespace NETPractice.Polymorphism.TransportCompany.Entities.AbstractTransport
             get => _passengerCount;
             set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new InvalidDataException("passenger count can't be negative or zero");
                 }
@@ -85,7 +96,8 @@ namespace NETPractice.Polymorphism.TransportCompany.Entities.AbstractTransport
         
         #endregion
         
-        public string Deliver(Cargo cargo) => "Delivering " + cargo.Content;
+        public string Deliver(Cargo cargo, string destinationAddress) 
+            => "Delivering " + cargo.Content + " to " + destinationAddress + " using " + Brand ;
         
         public override string ToString()
             => "Speed: " + Speed + Environment.NewLine 
