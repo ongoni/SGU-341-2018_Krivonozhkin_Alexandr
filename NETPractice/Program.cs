@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using NETPractice.Polymorphism.ITCompany.Entities;
 using NETPractice.Polymorphism.ITCompany.Entities.Employees;
 using NETPractice.Polymorphism.TransportCompany.Entities;
@@ -9,7 +10,7 @@ using NETPractice.Polymorphism.ITCompany.Logic;
 namespace NETPractice 
 {
     internal class Program 
-    {       
+    {
         public static void Main(string[] args)
         {
             TransportCompanyDataHolder.Add(
